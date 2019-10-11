@@ -6,15 +6,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
 
-public class QuickerReturnActivity extends AppCompatActivity {
-
+public class ScaleImageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quicker);
+        setContentView(R.layout.activity_scale_image);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         RecyclerView list = (RecyclerView) findViewById(R.id.list);
         SimpleAdapter adapter = new SimpleAdapter(list);

@@ -1,0 +1,103 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior=".behaviors.navbars.AppBarBehavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/topNavBarParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <com.example.android.coordinatedeffort.widget.TopNavigationView
+                    android:id="@+id/topNavBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:animateLayoutChanges="true"
+                    android:background="@android:color/white"
+                    android:theme="@style/NavigationBar"
+                    app:itemIconSize="32dp"
+                    app:itemIconTint="@color/bottomnavigation_image_color"
+                    app:itemTextAppearanceActive="@style/TopNavigationTextActive"
+                    app:itemTextAppearanceInactive="@style/TopNavigationTextInactive"
+                    app:itemTextColor="@color/bottomnavigation_image_color"
+                    app:labelVisibilityMode="labeled"
+                    app:menu="@menu/menu_top_navigation" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#303030"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/toolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/white"
+                        tools:text="Coordinator Layout" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:elevation="8dp"
+        android:theme="@style/NavigationBar"
+        app:itemIconTint="@color/bottomnavigation_image_color"
+        app:itemTextAppearanceActive="@style/BottomNavigationTextActive"
+        app:itemTextAppearanceInactive="@style/BottomNavigationTextInactive"
+        app:itemTextColor="@color/bottomnavigation_image_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_behavior=".behaviors.navbars.BottomNavigationBehavior"
+        app:menu="@menu/menu_bottom_navigation"
+        tools:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/fragmentContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:elevation="8dp"
+        android:visibility="gone"
+        app:layout_behavior=".behaviors.navbars.ButtonsLayoutBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

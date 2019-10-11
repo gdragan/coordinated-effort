@@ -2,7 +2,7 @@ package com.example.android.coordinatedeffort;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,14 +33,18 @@ public class MainActivity extends AppCompatActivity implements
                 "Simple Behavior",
                 "Footer View Return",
                 "Quicker Return",
-                "Custom Scrolling Behavior"
+                "Custom Scrolling Behavior",
+                "Scale Image Behavior",
+                "Navigation Bars"
         };
 
         mActions = new Intent[] {
                 new Intent(this, SimpleBehaviorActivity.class),
                 new Intent(this, FooterBarActivity.class),
                 new Intent(this, QuickerReturnActivity.class),
-                new Intent(this, SlidingCardsActivity.class)
+                new Intent(this, SlidingCardsActivity.class),
+                new Intent(this, ScaleImageActivity.class),
+                new Intent(this, NavigationBarsActivity.class)
         };
     }
 

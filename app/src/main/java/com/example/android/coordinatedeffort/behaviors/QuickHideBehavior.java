@@ -3,15 +3,13 @@ package com.example.android.coordinatedeffort.behaviors;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewCompat;
+import com.google.android.material.appbar.AppBarLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.android.coordinatedeffort.R;
 
 /**
  * Simple scrolling behavior that monitors nested events in the scrolling
@@ -44,7 +42,7 @@ public class QuickHideBehavior extends CoordinatorLayout.Behavior<View> {
         super(context, attrs);
 
         TypedArray a = context.getTheme()
-                .obtainStyledAttributes(new int[] {R.attr.actionBarSize});
+                .obtainStyledAttributes(new int[] {android.R.attr.actionBarSize});
         //Use half the standard action bar height
         mScrollThreshold = a.getDimensionPixelSize(0, 0) / 2;
         a.recycle();

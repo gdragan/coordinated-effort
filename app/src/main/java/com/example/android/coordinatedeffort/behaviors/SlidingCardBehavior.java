@@ -1,8 +1,8 @@
 package com.example.android.coordinatedeffort.behaviors;
 
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ScrollerCompat;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+import androidx.core.widget.ScrollerCompat;
 import android.view.View;
 
 import com.example.android.coordinatedeffort.widget.SlidingCardLayout;
